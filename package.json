@@ -1,0 +1,26 @@
+{
+  "name": "questions-answers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hr-rfe5-gladiolus/questions-answers.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hr-rfe5-gladiolus/questions-answers/issues"
+  },
+  "homepage": "https://github.com/hr-rfe5-gladiolus/questions-answers#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node.js": "0.0.1-security",
+    "nodemon": "^2.0.13",
+    "pg": "^8.7.1"
+  }
+}
