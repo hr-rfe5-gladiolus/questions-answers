@@ -1,15 +1,17 @@
 const express = require('express');
 const db = require('../db')
-
+const routes = require('./routes');
 
 const app = express();
 
 app.use(express.json())
 const port = 3000;
 
-app.get('/' , (req, res) => {
-  res.json('Node.js, Express and postgres API')
-})
+routes(app);
+
+// app.get('/' , (req, res) => {
+//   res.json('Node.js, Express and postgres API')
+// })
 
 
 app.listen(port, () => {

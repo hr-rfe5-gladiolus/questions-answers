@@ -10,4 +10,9 @@ const db = new postgres({
 
 db.connect()
 
+
+
+
+
+
 module.exports = db;

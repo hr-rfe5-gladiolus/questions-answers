@@ -25,7 +25,7 @@ CREATE TABLE questions(
 
 CREATE TABLE answers(
   id SERIAL NOT NULL,
-  question_id INT NOT NULL,
+  question_id INT NOT NULL REFERENCES questions(id),
   body VARCHAR NOT NULL,
   date_written BIGINT NOT NULL,
   answerer_name VARCHAR NOT NULL,
@@ -37,7 +37,7 @@ CREATE TABLE answers(
 
 CREATE TABLE answers_photos(
   id SERIAL NOT NULL,
-  answer_id INT NOT NULL,
+  answer_id INT NOT NULL REFERENCES answers(id),
   url VARCHAR NOT NULL,
   PRIMARY KEY (id)
 );
