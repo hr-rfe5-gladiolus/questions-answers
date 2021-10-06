@@ -130,7 +130,6 @@ module.exports = (app) => {
       if (err) {
         console.log(err)
       } else {
-        console.log(result.rows.id)
         res.sendStatus(201)
       }
     })
@@ -138,7 +137,7 @@ module.exports = (app) => {
     // console.log(req.body)
   })
   // add answer to a specific question
-  app.post('/qa/questions/:question_id/answer', (req, res) => {
+  app.post('/qa/questions/:question_id/answers', (req, res) => {
     var question_id = req.params.question_id
     var body = req.body.body
     var name = req.body.name
@@ -196,7 +195,7 @@ module.exports = (app) => {
     })
   })
   // mark answer as helpful
-  app.put('/qa/answer/:answer_id/helpful', (req, res) => {
+  app.put('/qa/answers/:answer_id/helpful', (req, res) => {
     var query = `update answers set helpful = helpful + 1 where id = ${req.params.answer_id}`
     db.query(query)
     .then(res.sendStatus(204))
@@ -205,7 +204,7 @@ module.exports = (app) => {
     })
   })
   // report answer
-  app.put('/qa/answer/:answer_id/report', (req, res) => {
+  app.put('/qa/answers/:answer_id/report', (req, res) => {
     var query = `update answers set reported = true where id = ${req.params.answer_id}`
     db.query(query)
     .then(res.sendStatus(204))

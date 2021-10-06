@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "nodemon ./server/index.js"
   },
   "repository": {
@@ -19,8 +19,10 @@
   "homepage": "https://github.com/hr-rfe5-gladiolus/questions-answers#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "jest": "^27.2.4",
     "node.js": "0.0.1-security",
     "nodemon": "^2.0.13",
-    "pg": "^8.7.1"
+    "pg": "^8.7.1",
+    "supertest": "^6.1.6"
   }
 }
