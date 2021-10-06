@@ -138,7 +138,7 @@ module.exports = (app) => {
     // console.log(req.body)
   })
   // add answer to a specific question
-  app.post('/qa/questions/:question_id/answer', (req, res) => {
+  app.post('/qa/questions/:question_id/answers', (req, res) => {
     var question_id = req.params.question_id
     var body = req.body.body
     var name = req.body.name
