@@ -19,3 +19,7 @@ app.use('/loaderio-b000007aa98c182f872fd60f26624501.txt', express.static(__dirna
 app.listen(port, () => {
   console.log(`server is listening to port ${port}`)
 })
+
+
+module.exports = app;
+
