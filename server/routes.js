@@ -94,7 +94,7 @@ module.exports = (app) => {
         select l.id , COALESCE(array_agg(l.photos) filter (where l.photos is not null), '{}') as photos from l group by l.id
       ),
       m as (
-        select k.id, answers.body, to_timestamp(answers.date_written/1000) as date , answers.answerer_name, answers.helpful as helpfulness, k.photos from k join answers on k.id = answers.id where answers.reported = false
+        select k.id as answer_id, answers.body, to_timestamp(answers.date_written/1000) as date , answers.answerer_name, answers.helpful as helpfulness, k.photos from k join answers on k.id = answers.id where answers.reported = false
       )
       select * from m`
 
