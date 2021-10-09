@@ -16,3 +16,9 @@ $git clone https://github.com/hr-rfe5-gladiolus/questions-answers.git
 - node-postgres
 - PostgreSQL
 
+# Installation
+- npm install
+- install postgres
+- create apropirate user and create database
+- vim ./server/database/index.js and change the username and password to connect to database
+- psql -f ./server/database/schema.sql to run the schema file to create tables
