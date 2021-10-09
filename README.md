@@ -9,3 +9,10 @@ Start by cloning the repo into your computer in the terminal:
 
 $git clone https://github.com/hr-rfe5-gladiolus/questions-answers.git
 
+# Requirements
+-Node.js v16
+-Express
+-Jest
+-node-postgres
+-PostgreSQL
+
